@@ -30,7 +30,7 @@ class ContactController extends Controller
         $phoneField = (new MultitextCustomFieldValuesModel())->setFieldCode('PHONE');
         $multitextCustomFieldValueCollection = new MultitextCustomFieldValueCollection();
         $multitextCustomFieldModel = new MultitextCustomFieldValueModel();
-        $multitextCustomFieldModel->setValue('79998887766')
+        $multitextCustomFieldModel->setValue($request->input('phone'))
             ->setEnum('WORK');
         $multitextCustomFieldValueCollection->add($multitextCustomFieldModel);
 
